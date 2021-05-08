@@ -20,3 +20,12 @@ class Triangle extends Polygon {
         return (this.arrSides[0] + this.arrSides[1] > this.arrSides[2]);
     }
 }
+
+class Square extends Polygon {
+    get isValid() {
+        if (this.count !== 4) {return};
+        return (this.arrSides.every((val,i,arr) => val ===arr[0]));
+    }
+
+
+}
