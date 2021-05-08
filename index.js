@@ -26,6 +26,7 @@ class Square extends Polygon {
         if (this.count !== 4) {return};
         return (this.arrSides.every((val,i,arr) => val ===arr[0]));
     }
-
-
+    get area() {
+        return (this.arrSides[0] ** 2);
+    }
 }
