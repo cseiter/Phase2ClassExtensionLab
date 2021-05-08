@@ -12,3 +12,11 @@ class Polygon {
         return this.arrSides.reduce((a,b)=> a+b,0)
     }
 }
+
+class Triangle extends Polygon {
+    get isValid() {
+        if (this.count !== 3) {return};
+        this.arrSides.sort();
+        return (this.arrSides[0] + this.arrSides[1] > this.arrSides[2]);
+    }
+}
